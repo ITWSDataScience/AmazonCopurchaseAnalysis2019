@@ -16,7 +16,7 @@ keys = {'1': 'Id',
 
 # In[4]: saves product category information into CSV file
 def groundTruth2CSV(ground_truth, filename):
-    print("5. Saving product category info into file: \n\t", filename)
+    print("5. Saving product category info into file: \n\t", filename, "\n")
     
     # open a file to write network information
     with open(filename, 'w') as csv:
@@ -26,11 +26,11 @@ def groundTruth2CSV(ground_truth, filename):
         
         # write data
         for tupl in ground_truth:
-            csv.write(tupl[0] + ',' + tupl[1] + '\n')
+            csv.write(str(tupl[0]) + ',' + str(tupl[1]) + '\n')
 
 # In[3]: saves network adjacency matrix into CSV file
 def network2CSV(network, filename):
-    print("4. Saving network into file: \n\t", filename)
+    print("4. Saving network into file: \n\t", filename, "\n")
     
     # open a file to write network information
     with open(filename, 'w') as csv:
@@ -70,9 +70,13 @@ def reIndexNetwork(network, dataset):
         
     # re-index ground truth
     for pid, product in dataset.items():   
-
+        pid = int(pid)
         if pid in networkx:
             ground_truth.append((networkx[pid], product['category']))
+    
+    # final network info
+    print("\t$", len(ids), " nodes in the network.")
+    print("\t$", len(reindexed), " edges in the network.\n")
         
     return reindexed, ground_truth
     
@@ -99,9 +103,7 @@ def exctractNetwork(dataset):
     
     # sort the tuples
     network.sort(key = lambda x: x[0])
-    print("\t$", len(products), " nodes in the network.")
-    print("\t$", len(network), " edges in the network.")
-    print("\t$", counter, " edges not found, as the network does not contain all given neighboring nodes.")
+    print("\t%", counter, " edges not found, as the dataset does not contain all given neighboring nodes.\n")
     
     return network
 
@@ -153,7 +155,8 @@ def loadAmazonMeta(filename):
             data[ids]['category'] = 'discontinued product'
             counter += 1
             
-    print("\t*", counter, " products had null descriptors for \'neighbors\' or \'category\' keys (discontinued products).")
+    # discontinued product information - it will be removed by the network extraction if necessary
+    print("\t*", counter, " products had null descriptors for \'neighbors\' or \'category\' keys.\n")
     
     return data
 
