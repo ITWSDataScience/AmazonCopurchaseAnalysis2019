@@ -52,15 +52,23 @@ python embedding_clustering.py --input ../../output/preprocessing/product_networ
 ```
 The above example runs the graph embedding algorithm on the input file specified by the "--input" option, with output file locations specified by the "--\*-output" parameters. For this particular dataset, we expect to have 4 clusters and the dimensionality of the embeddings shall be 2.
 
-### Step 5: EVALUATION (pending)
+### Step 5: EVALUATION (task is done)
 Use inferred product category groups and ground truth (from Step 2) to evaluate the clustering results. We will evaluate our method against the ground truth. Metrics that can be used are: Adjusted Rand Index, Adjusted Mutual Information Index, Homogeneity, Completeness and V-measure. 
+
+| Metric | GEMSEC | DeepWalk |
+| ------ | ------ | -------- |
+| ARI | 0.0137 | -0.0759 |
+| AMI | 0.0156 | 0.0238 |
+| Homogeneity | 0.02494 | 0.0294 |
+| Completeness | 0.0156 | 0.0238 |
+| V-measure | 0.0192 | 0.0263 |
 
 ### Step 6: VISUALIZATION (task is done)
 Use ground truth and the numerical vector representations for each node to plot the “correct” visualization of the amazon co-purchase network. Also, use inferred product category groups and the numerical vector representations for each node to plot the “inferred” visualization of the amazon co-purchase network.
 
 <p align="center">
   <img width="700" src="output/visualizations/gemsec.png">
-  GEMSEC used as visualization tool as well as clustering technique. </br></br>
+  </br>Figure 1: GEMSEC used as visualization tool as well as clustering technique. </br>
   <img width="700" src="output/visualizations/deepwalk.png">
-  DeepWalk output used for comparison. </br></br>
+  </br>Figure 2: DeepWalk output used for comparison. </br>
 </p>
