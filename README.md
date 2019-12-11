@@ -55,5 +55,12 @@ The above example runs the graph embedding algorithm on the input file specified
 ### Step 5: EVALUATION (pending)
 Use inferred product category groups and ground truth (from Step 2) to evaluate the clustering results. We will evaluate our method against the ground truth. Metrics that can be used are: Adjusted Rand Index, Adjusted Mutual Information Index, Homogeneity, Completeness and V-measure. 
 
-### Step 6: VISUALIZATION (pending)
+### Step 6: VISUALIZATION (task is done)
 Use ground truth and the numerical vector representations for each node to plot the “correct” visualization of the amazon co-purchase network. Also, use inferred product category groups and the numerical vector representations for each node to plot the “inferred” visualization of the amazon co-purchase network.
+
+<p align="center">
+  <img width="700" src="output/visualizations/gemsec.png">
+  GEMSEC used as visualization tool as well as clustering technique. </br></br>
+  <img width="700" src="output/visualizations/deepwalk.png">
+  DeepWalk output used for comparison. </br></br>
+</p>

@@ -48,7 +48,9 @@ def loadCategories(filename):
                 continue
             else:
                 data = line.split(',')
-                categories[int(data[0])] = data[1]
+                categories[int(data[0])] = data[1].strip()
+                
+    print("\t", len(categories), " categories were loaded.")
                 
     return categories
 
@@ -69,9 +71,11 @@ def loadClusters(filename):
         # load entire json as dict
         data = json.load(results)
     
-    # re-format keys to be integers
+    # re-format keys and values to be integers
     for key, value in data.items():
-        clusters[int(key)] = value
+        clusters[int(key)] = int(value)
+        
+    print("\t", len(clusters), " labels were loaded.")
         
     return clusters
                 
@@ -129,8 +133,8 @@ def evaluate_clustering(clusters, categories):
     
 # In[]: the main function
 def main():
-    clusters = loadClusters('path/to/product_cluster_assignments.json')
-    categories = loadCategories('path/to/product_category.csv')
+    clusters = loadClusters('../../output/deep_walk/clusters/product_cluster_assignments.json')
+    categories = loadCategories('../../output/preprocessing/product_category.csv')
     evaluate_clustering(clusters, categories)
     
 if __name__ == '__main__':
