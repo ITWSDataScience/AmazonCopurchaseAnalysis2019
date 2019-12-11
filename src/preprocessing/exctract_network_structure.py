@@ -7,12 +7,12 @@ network_output_file_path = '../../output/preprocessing/product_network.csv'
 information_output_file_path = '../../output/preprocessing/product_category.csv'
 
 # use global key dictionary to parse specific information
-keys = {'1': 'Id',
-        '2': 'ASIN',
-        '3': 'group',
-        '4': 'reviews',
-        '5': 'similar',
-        '6': 'categories'}
+keys = {'1': 'Id: ',
+        '2': 'ASIN: ',
+        '3': 'group: ',
+        '4': 'reviews: ',
+        '5': 'similar: ',
+        '6': 'categories: '}
 
 # In[4]: saves product category information into CSV file
 def groundTruth2CSV(ground_truth, filename):
@@ -112,6 +112,7 @@ def loadAmazonMeta(filename):
     print("1. Loading dataset from file: \n\t", filename)
     
     counter = 0
+    counter_2 = 0
     data = dict()
     current_id = -1
     
@@ -154,11 +155,21 @@ def loadAmazonMeta(filename):
             data[ids]['neighbors'] = []
             data[ids]['category'] = 'discontinued product'
             counter += 1
+    
+    # remove items that are not in one of the 4 valid categories
+    clean_data = dict()
+    for ids, product in data.items():
+        if product['category'] in ['Book', 'Music', 'Video', 'DVD']:
+            clean_data[ids] = product
+        else:
+            counter_2 += 1
+            continue
             
     # discontinued product information - it will be removed by the network extraction if necessary
-    print("\t*", counter, " products had null descriptors for \'neighbors\' or \'category\' keys.\n")
+    print("\t*", counter, " products had null descriptors for \'neighbors\' or \'category\' keys.")
+    print("\t*", counter_2, " products were not in one of the 4 valid categories.\n")
     
-    return data
+    return clean_data
 
 # In[0]: main function
 def main():
