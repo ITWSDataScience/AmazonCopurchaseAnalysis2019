@@ -1,0 +1,27 @@
+Coverage,"Contains the subset of Amazon product metadata and review information about 548,552 
+		different products (Books, music CDs, DVDs and VHS video tapes). 
+		The data was collected in summer 2006."
+Description,"The product_network.csv file is comma separated formatted file has two columns titled 
+		""product.index"" and ""product.category"".
+			The ""product.index"" column contains the index number of the product, which is an incrementing integer value.
+ 			The ""product.category"" column contains the category of the product, which can take one of the following values:
+	 			""Book"": for products that are books,
+	 			""Music"": for products that are music CDs,
+	 			""DVD"": for products that are DVDs, and
+	 			""Video"": for products that are VHS tapes."
+Type,Text
+Relation,-
+Source,https://snap.stanford.edu/data/amazon-meta.html
+Subject,Amazon Products
+Title,Amazon product co-purchasing network metadata dataset
+Contributor,Team 10
+Creator,"Gregorios Katsios, Team 10"
+Publisher,"Gregorios Katsios, Team 10"
+Rights,"RPI, Access with creator's permission"
+Date,2019-12-04
+Date Modified,2019-12-04
+Format,"Text, CSV"
+Identifier,product_network.csv
+Language,English
+
+

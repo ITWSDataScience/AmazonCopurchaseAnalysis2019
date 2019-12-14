@@ -125,11 +125,11 @@ def evaluate_clustering(clusters, categories):
     
     # print the results
     print("\tThe results are:")
-    print("\tAdjusted Rand Index: ", ari)
-    print("\tAdjusted Mutual Information: ", ami)
-    print("\tHomogeneity: ", homogeneity)
-    print("\tCompleteness: ", completeness)
-    print("\tV-Measure: ", v)
+    print("\tAdjusted Rand Index: ", round(ari, 3))
+    print("\tAdjusted Mutual Information: ", round(ami, 3))
+    print("\tHomogeneity: ", round(homogeneity, 3))
+    print("\tCompleteness: ", round(completeness, 3))
+    print("\tV-Measure: ", round(v, 3))
     
 # In[]: the main function
 def main():
