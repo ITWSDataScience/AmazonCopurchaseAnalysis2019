@@ -30,14 +30,14 @@ python extract_network_structure.py
 #### Output Files
 The parser outputs two files, one for the adjacency list (product_network.csv), and one for the ground truth (product_category.csv). Both of these files are plaintext CSV formatted and are located in https://github.com/ITWSDataScience/AmazonCopurchaseAnalysis2019/tree/master/output/preprocessing/. We also generate metadata that are stored in separate but co-located files, following the Dublin Core metadata schema.
 <p align="center">
-  <img height="500" src="output/visualizations/data/product_network.png">
-  </br>Figure 1: Snapshot of the contets of product_network.csv. </br>
+  <img height="200" src="output/visualizations/data/product_network.png">
+  </br>Figure 1: Snapshot of the contets of product_network.csv. </br></br>
   <img width="500" src="output/visualizations/data/product_network_metadata.png">
-  </br>Figure 2: Snapshot of the contets of product_network_metadata.csv. </br>
-  <img height="500" src="output/visualizations/data/product_category.png">
-  </br>Figure 3: Snapshot of the contets of product_category.csv. </br>
+  </br>Figure 2: Snapshot of the contets of product_network_metadata.csv. </br></br>
+  <img height="200" src="output/visualizations/data/product_category.png">
+  </br>Figure 3: Snapshot of the contets of product_category.csv. </br></br>
   <img width="500" src="output/visualizations/data/product_category_metadata.png">
-  </br>Figure 4: Snapshot of the contets of product_categorymetadata.csv. </br>
+  </br>Figure 4: Snapshot of the contets of product_categorymetadata.csv. </br></br>
 </p>
 
 
@@ -68,10 +68,10 @@ The above example runs the graph embedding algorithm on the input file specified
 
 Both of these files are plaintext, the first is CSV formatted and the second is JSON formatted. They are located under https://github.com/ITWSDataScience/AmazonCopurchaseAnalysis2019/tree/master/output/gemsec/
 <p align="center">
-  <img height="500" src="output/visualizations/data/product_embeddings.png">
-  </br>Figure 5: Snapshot of the contets of product_embeddings.csv. </br>
-  <img height="500" src="output/visualizations/data/product_cluster_assignments.png">
-  </br>Figure 6: Snapshot of the contets of product_cluster_assignments.json. </br>
+  <img height="200" src="output/visualizations/data/product_embeddings.png">
+  </br>Figure 5: Snapshot of the contets of product_embeddings.csv. </br></br>
+  <img height="200" src="output/visualizations/data/product_cluster_assignments.png">
+  </br>Figure 6: Snapshot of the contets of product_cluster_assignments.json. </br></br>
 </p>
 
 ### Step 5: EVALUATION (task is done)
@@ -103,7 +103,7 @@ Use ground truth and the numerical vector representations for each node to plot 
 
 <p align="center">
   <img width="700" src="output/visualizations/gemsec.png">
-  </br>Figure 7: GEMSEC used as visualization tool as well as clustering technique. </br>
+  </br>Figure 7: GEMSEC used as visualization tool as well as clustering technique. </br></br>
   <img width="700" src="output/visualizations/deepwalk.png">
-  </br>Figure 8: DeepWalk output used for comparison. </br>
+  </br>Figure 8: DeepWalk output used for comparison. </br></br>
 </p>
