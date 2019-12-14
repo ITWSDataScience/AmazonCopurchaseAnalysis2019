@@ -32,11 +32,11 @@ The parser outputs two files, one for the adjacency list (product_network.csv), 
 <p align="center">
   <img height="200" src="output/visualizations/data/product_network.png">
   </br>Figure 1: Snapshot of the contets of product_network.csv. </br></br>
-  <img width="500" src="output/visualizations/data/product_network_metadata.png">
+  <img width="700" src="output/visualizations/data/product_network_metadata.png">
   </br>Figure 2: Snapshot of the contets of product_network_metadata.csv. </br></br>
   <img height="200" src="output/visualizations/data/product_category.png">
   </br>Figure 3: Snapshot of the contets of product_category.csv. </br></br>
-  <img width="500" src="output/visualizations/data/product_category_metadata.png">
+  <img width="700" src="output/visualizations/data/product_category_metadata.png">
   </br>Figure 4: Snapshot of the contets of product_categorymetadata.csv. </br></br>
 </p>
 
